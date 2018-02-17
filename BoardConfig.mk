@@ -46,7 +46,7 @@ TARGET_NO_RADIOIMAGE := true
 #TARGET_QCOM_MEDIA_VARIANT := caf-msm8994
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
+#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 
 # Audio
 AUDIO_FEATURE_ENABLED_HFP := true
@@ -167,7 +167,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+include device/xiaomi/libra/sepolicy/qcom/sepolicy/sepolicy.mk
 include device/xiaomi/libra/sepolicy/legacy/legacy-sepolicy.mk
 include device/xiaomi/libra/sepolicy/oth/common/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
