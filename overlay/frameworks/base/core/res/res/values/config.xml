@@ -392,7 +392,8 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">83</integer>
     
-    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+    <!-- Boolean indicating whether we want button brightness support -->
+    <bool name="config_button_brightness_support">true</bool>
     
     <!-- Whether device has dash charging support -->
     <bool name="config_hasDashCharger">true</bool>
