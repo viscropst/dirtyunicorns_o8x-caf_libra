@@ -204,7 +204,11 @@ int power_hint_override(power_hint_t hint, void *data)
 
 int set_interactive_override(int on)
 {
-    return HINT_NONE; /* Don't excecute this code path, not in use */
+    ALOGD("%sabling big CPU cluster", on ? "En" : "Dis");
+    sysfs_write(BIG_MAX_CPU_PATH, on ? "2" : "0");
+    sysfs_write(BIG_MIN_CPU_PATH, on ? "1" : "0");
+    return HINT_HANDLED; /* Don't excecute this code path, not in use */
+    
     char governor[80];
 
     if (get_scaling_governor(governor, sizeof(governor)) == -1) {
